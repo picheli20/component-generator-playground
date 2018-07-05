@@ -5,6 +5,7 @@ import { Rule, SchematicContext, Tree } from '@angular-devkit/schematics';
 // per file.
 export function myComponent(options: any): Rule {
   return (tree: Tree, _context: SchematicContext) => {
+    tree.create(options.name || 'hello', 'world');
     return tree;
   };
 }
